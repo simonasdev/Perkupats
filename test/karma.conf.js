@@ -26,6 +26,8 @@ module.exports = function(config) {
       'bower_components/angularfire/dist/angularfire.js',
       'bower_components/angular-ui-router/release/angular-ui-router.js',
       'bower_components/angular-md5/angular-md5.js',
+      'bower_components/ng-page-title/dist/ng-page-title.js',
+      'bower_components/angular-wizard/dist/angular-wizard.min.js',
       'bower_components/angular-mocks/angular-mocks.js',
       // endbower
       'app/scripts/**/*.js',

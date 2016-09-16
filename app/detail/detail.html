@@ -1,0 +1,260 @@
+<div class="mobile-menu pull-right">
+    <ul>
+        <li><a href="#">Gauk pasiūlymą</a></li>
+        <li><a href="#">Atsiliepimai</a></li>
+        <li><a href="#">Visos paslaugos</a></li>
+    </ul>
+</div>
+<div class="header service-header">
+    <div class="container">
+        <div class="col-lg-12">
+            <div class="logo pull-left">
+                <a href="#"><img src="images/logo-white.png" alt="#"/></a>
+            </div>
+            <div class="visible-xs visible-sm pull-right open-menu">
+                <i class="fa fa-bars" aria-hidden="true"></i>
+            </div>
+            <div class="visible-xs visible-sm pull-right close-menu">
+                <i class="fa fa-close" aria-hidden="true"></i>
+            </div>
+            <div class="menu pull-right hidden-xs hidden-sm">
+                <ul>
+                    <li><a href="#">Visos paslaugos</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-lg-12" ng-repeat="album in albums | filter: {id: thisAlbum}">
+            <div class="main-search text-center">
+                <div class="headings">
+                    <h1>{{album.album}} paslaugos tavo verslui</h1>
+                    <span>5000+ įmonių padeda mums surasti geriausią pasiūlymą Tau!</span>
+                </div>
+                    <div class="form-submit text-center detail">
+                        <button  ui-sref="step1" type="submit">Gauk geriausią pasiūlymą</button>
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="service-block">
+    <div class="container">
+        <div class="cms col-lg-7 col-md-7 col-sm-7" ng-repeat="album in albums | filter: {id: thisAlbum}">
+            <h2>{{album.title1}}</h2>
+              <p>
+                {{album.Apie_paslauga}}
+              </p>
+        </div>
+        <div class="col-lg-5 col-md-5 col-sm-5 image">
+            <img src="images/service-01.jpg" alt="#"/>
+        </div>
+    </div>
+</div>
+<div class="service-block" ng-repeat="album in albums | filter: {id: thisAlbum}">
+    <div class="container">
+        <div class="pull-left">
+            <div class="cms col-lg-7 col-md-7 col-sm-7 pull-right">
+                <h2>{{album.title2}}</h2>
+                <p>
+                    {{album.description1}}
+                </p>
+                <a href="#/step1"  class="button">Gauk pasiulyma<i class="fa fa-caret-right" aria-hidden="true"></i></a>
+            </div>
+            <div class="col-lg-5 col-md-5 col-sm-5 image pull-left">
+                <img src="images/service-02.jpg" alt="#"/>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="service-block">
+    <div class="container">
+        <div class="cms col-lg-7 col-md-7 col-sm-7" ng-repeat="album in albums | filter: {id: thisAlbum}">
+            <h2>{{album.title3}}</h2>
+              <p>
+                {{album.description2}}
+              </p>
+        </div>
+        <div class="col-lg-5 col-md-5 col-sm-5 image">
+            <img src="images/service-01.jpg" alt="#"/>
+        </div>
+    </div>
+</div>
+<div class="service-block">
+    <div class="container">
+        <div class="col-lg-12 col-md-12 col-sm-12" ng-repeat="album in albums | filter: {id: thisAlbum}">
+            <h2>{{album.title4}}</h2>
+              <p>
+                {{album.description3}}
+              </p>
+        </div>
+    </div>
+</div>
+<div class="how service-how">
+    <div class="container">
+        <div class="col-lg-12">
+            <h2>Kaip tai veikia?</h2>
+            <ul class="tabs-menu visible-xs">
+                <li class="current"><a href="#tab-1">1</a></li>
+                <li><a href="#tab-2">2</a></li>
+                <li><a href="#tab-3">3</a></li>
+            </ul>
+            <div class="clearfix tab">
+                <div id="tab-1" class="block pull-left tab-content">
+                    <div class="text">
+                        <div class="number hidden-xs">1</div>
+                        <div class="title">Išsiųsk užklausą</div>
+                        <div class="paragraph">
+                          Užpildykite trumpą užklausos formą, kurioje informuosite paslaugos tiekėjus savo Jūsų poreikius.
+                        </div>
+                    </div>
+                    <div class="image">
+                        <img src="images/how-01.png" alt="#"/>
+                        <a>Siųsti užklausą</a>
+                    </div>
+                </div>
+                <div id="tab-2" class="block pull-left tab-content">
+                    <div class="text">
+                        <div class="number hidden-xs">2</div>
+                        <div class="title">Gauk pasiūlymus</div>
+                        <div class="paragraph">
+                          Gaukite paslaugų tiekimo pasiūlymus iš skirtingų paslaugų tiekėjų.
+                        </div>
+                    </div>
+                    <div class="image">
+                        <img src="images/how-02.png" alt="#"/>
+                    </div>
+                </div>
+                <div id="tab-3" class="block pull-left tab-content">
+                    <div class="text">
+                        <div class="number hidden-xs">3</div>
+                        <div class="title">Išsiųsk užklausą</div>
+                        <div class="paragraph">
+                          Išsirinkite sau priimtiniausią ir geriausiai tinkantį pasiūlymą.
+                        </div>
+                    </div>
+                    <div class="image">
+                        <img src="images/how-03.png" alt="#"/>
+                        <a >Perku Pats</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="reviews service-reviews">
+    <div class="container">
+        <div class="col-lg-12">
+            <div class="clearfix headline">
+                <h2 class="pull-left">Daugybė klientų pasinaudojo šia paslauga</h2>
+            </div>
+            <div class="row clearfix">
+                <div class="col-lg-3 col-md-6 col-sm-6 review">
+                    <div class="inner">
+                        <div class="rating">
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star-o" aria-hidden="true"></i>
+                        </div>
+                        <div class="text">
+                          Pirmą kartą sistema pasinaudojau savo įmonei ieškodama interneto tiekėjo. Tikrai kur kas greičiau nei naršyti internete ir ranka pildyti užklausos formas.
+                        </div>
+                        <div class="author">
+                            Neringa
+                            <br/>
+                            COO, Pakrantės jausmas
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6 review hidden-xs">
+                    <div class="inner">
+                        <div class="rating">
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star-o" aria-hidden="true"></i>
+                        </div>
+                        <div class="text">
+                          Ačiū, jog padėjote sutaupyti daug laiko ir nemažai pinigų.
+                        </div>
+                        <div class="author">
+                            Kažkas Pavardienė
+                            <br/>
+                            Pardavimo vadovas, UAB "Akmena"
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6 review hidden-sm hidden-xs">
+                    <div class="inner">
+                        <div class="rating">
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star-o" aria-hidden="true"></i>
+                        </div>
+                        <div class="text">
+                          Sistema naudojomės ieškodami web kūrėjų. Kadangi ieškojome ekonomiško varianto, galimybė rinktis iš gan plataus kainų spektro labai pagelbėjo.
+                        </div>
+                        <div class="author">
+                            Kažkas Pavardienė
+                            <br/>
+                            Generalinis direktorius, UAB "Avija"
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6 review hidden-sm hidden-xs">
+                    <div class="inner">
+                        <div class="rating">
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star-o" aria-hidden="true"></i>
+                        </div>
+                        <div class="text">
+                          Puiki sistema, kai neturi pažįstamų ar draugų, kurie galėtų kažką rekomenduoti ar tiesiog norint sužinoti rinkos pasiūlą.
+                        </div>
+                        <div class="author">
+                            Kažkas Pavardienė
+                            <br/>
+                            CMO, Grigeo
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="get-offer hidden-xs hidden-sm">
+    <div class="container">
+        <div class="col-lg-12">
+            <div class="main-search">
+                <div class="headings">
+                    <h2>Gauk pasiūlymą nemokamai!</h2>
+                    <span>Užpildyk formą dabar</span>
+                </div>
+                <div class="form clearfix">
+                  <div class="dropdown pull-left">
+                      <button class="select" id="select-city-1" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                          <span class="selection">Pasirinkite paslaugą</span>
+                          <i class="fa fa-angle-down" aria-hidden="true"></i>
+                      </button>
+                      <ul class="dropdown-menu" aria-labelledby="select-city-1">
+                          <li ng-class="{'open': clicked}" ng-click="clicked = !clicked" ng-repeat="album in albums" value="{{album.album}}"><a href="#/paslaugos/{{album.id}}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">{{album.album}}</a></li>
+                      </ul>
+                  </div>
+                    <div class="form-submit pull-left">
+                        <button type="submit">Gauk geriausią pasiūlymą<i class="fa fa-caret-right" aria-hidden="true"></i></button>
+                    </div>
+                </div>
+                <div class="keywords">
+                    Populiariausios paieškos:
+                    <a ng-repeat="album in albums" ui-sref="beatles.detail({id:album.id})">{{album.album}},    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div ng-include src="'layouts/footer.html'"></div>

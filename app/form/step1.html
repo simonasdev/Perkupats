@@ -1,0 +1,46 @@
+<div ng-include src="'layouts/header.html'"></div>
+<div class="main-block">
+    <div class="container">
+        <div class="col-lg-12">
+            <div class="request">
+                <div class="title"><i class="fa fa-info-circle" aria-hidden="true"></i>Atsakykite į kelis klausimus, jie padės surasti Jums Buhalterines paslaugas</div>
+                <div class="block">
+                    <div class="progress-line">
+                        <div class="filled filled-1"></div>
+                    </div>
+                    <div class="question">
+                        When was your most recent massage therapy session?
+                    </div>
+                    <form name="userForm" novalidate>
+                    <div class="form-elements">
+                        <div class="form-element clearfix">
+                          <input type="radio" name="answerGroup" value="value1" id="radio-01" ng-model="formData.value" required/>
+                          <label for="radio-01">klasuimas1</label>
+                        </div>
+                        <div class="form-element clearfix">
+                          <input type="radio" name="answerGroup" value="value2" id="radio-02" ng-model="formData.value" required/>
+                          <label for="radio-02">klasuimas2</label>
+                        </div>
+                        <div class="form-element clearfix">
+                          <input type="radio" name="answerGroup" value="value3" id="radio-03" ng-model="formData.value" required/>
+                          <label for="radio-03">klasuimas2</label>
+                        </div>
+                        <div class="form-element clearfix">
+                          <input type="radio" name="answerGroup" value="value4" id="radio-04" ng-model="formData.value" required/>
+                          <label for="radio-04">klasuimas3</label>
+                        </div>
+                        <div class="form-element clearfix">
+                            <input type="radio" name="answerGroup" value="value5" id="radio-05" ng-model="formData.value" required/>
+                            <label for="radio-05">klasuimas4</label>
+                        </div>
+                    </div>
+                    <div class="submit">
+                        <button ng-click="klausimas1();" ng-disabled="userForm.$invalid">Toliau<i class="fa fa-caret-right" aria-hidden="true"></i></button>
+                    </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div ng-include src="'layouts/footer.html'"></div>

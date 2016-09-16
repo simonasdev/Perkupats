@@ -1,13 +1,271 @@
-<div class="page-wrapper">
 
-  <div class="page-header">
-    <h1><img class="logo-img" src="images/logo.png" /> Welcome to FireSlack</h1>
-  </div>
-
-  <p class="text-center">
-    <a ui-sref="login" class="btn btn-lg btn-default">Login</a> or <a ui-sref="register" class="btn btn-lg btn-primary">Register</a>
-  </p>
-
-  <p>FireSlack is an open source <a href="https://slack.com" target="_blank">Slack</a> clone built using <a href="https://www.firebase.com" target="_blank">Firebase</a>'s <a href="https://www.firebase.com/docs/web/libraries/angular/" target="_blank">AngularFire</a> library. Learn how to create this app from scratch with the <a href="https://thinkster.io/angularfire-slack-tutorial/" target="_blank">Thinkster.io tutorial</a>!</p>
-
-</div>
+<div class="header">
+    <div class="container">
+        <div class="col-lg-12">
+            <div class="logo pull-left">
+                <a href="#"><img src="images/logo-white.png" alt="#"/></a>
+            </div>
+            <div class="visible-xs visible-sm pull-right open-menu">
+                  <hamburger-toggle state="stateModel"></hamburger-toggle>
+            </div>
+            <div class="menu pull-right hidden-xs hidden-sm">
+                <ul>
+                    <li><a ui-sref="beatles.list">Visos paslaugos</a></li>
+                </ul>
+            </div>
+        </div>
+              <div class="col-lg-12">
+                  <div class="main-search">
+                      <div class="headings">
+                          <h1>Rask paslaugą savo verslui</h1>
+                          <span>5000+ įmonių padeda mums surasti geriausią pasiūlymą Tau! Surask norimą paslaugą ir rinkis iš kelių skirtingų pasiūlymų! </span>
+                      </div>
+                      <div class="form clearfix">
+                        <div class="dropdown pull-left">
+                            <button class="select" id="select-city-1" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                              <i class="fa fa-search" aria-hidden="true"></i>
+                                <span class="selection">Kokios paslaugos norėtumėte šiandien?</span>
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="select-city-1">
+                                <li  ng-class="{'open': clicked}" ng-click="clicked = !clicked" ng-repeat="album in albums" value="{{album.album}}"><a ui-sref="beatles.detail({id:album.id})" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">{{album.album}}</a></li>
+                            </ul>
+                        </div>
+                          <div class="form-submit pull-left ">
+                              <button type="submit">Gauk geriausią pasiūlymą<i class="fa fa-caret-right" aria-hidden="true"></i></button>
+                          </div>
+                      </div>
+                      <div class="keywords hidden-sm hidden-xs">
+                          Populiariausios paieškos:
+                          <a ng-repeat="album in albums" ui-sref="beatles.detail({id:album.id})">{{album.album}},    </a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="services">
+          <div class="container">
+              <div class="col-lg-12">
+                  <div class="clearfix headline">
+                      <h2 class="pull-left">Paslaugos</h2>
+                      <a ui-sref="beatles.list" class="show-all pull-right visible-xs visible-sm">Rodyti visas</a>
+                  </div>
+                  <div class="clearfix row">
+                      <div class="category col-lg-4 col-md-4">
+                          <div class="inner">
+                              <div class="image">
+                                  <img src="images/service-category-03.jpg" alt="#"/>
+                              </div>
+                              <div class="text">
+                                  <h3>Verslo valdymo sistemos</h3>
+                                  <ul ng-repeat="album in albums | filter: { kategorija: 'sistemos'}">
+                                      <li><a ui-sref="beatles.detail({id:album.id})">{{album.album}}</a></li>
+                                  </ul>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="category col-lg-4 col-md-4 hidden-xs hidden-sm">
+                          <div class="inner">
+                              <div class="image">
+                                  <img src="images/coding.png" alt="#"/>
+                              </div>
+                              <div class="text">
+                                  <h3>Progrmavimas</h3>
+                                  <ul ng-repeat="album in albums | filter: { kategorija: 'programavimas'}">
+                                      <li><a href="#/paslaugos/{{album.id}}">{{album.album}}</a></li>
+                                  </ul>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="category col-lg-4 col-md-4 hidden-xs hidden-sm">
+                          <div class="inner">
+                              <div class="image">
+                                  <img src="images/marketing.png" alt="#"/>
+                              </div>
+                              <div class="text">
+                                  <h3>Skaitmeninė rinkodara</h3>
+                                  <ul ng-repeat="album in albums | filter: { kategorija: 'rinkodara'}">
+                                      <li><a href="#/paslaugos/{{album.id}}">{{album.album}}</a></li>
+                                  </ul>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="text-center hidden-xs hidden-sm hidden-xs hidden-md">
+                      <a ui-sref="beatles.list" class="show-all">Rodyti visas</a>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="how service-how">
+          <div class="container">
+              <div class="col-lg-12">
+                  <h2>Kaip tai veikia?</h2>
+                  <ul class="tabs-menu visible-xs">
+                      <li class="current"><a href="#tab-1">1</a></li>
+                      <li><a href="#tab-2">2</a></li>
+                      <li><a href="#tab-3">3</a></li>
+                  </ul>
+                  <div class="clearfix tab">
+                      <div id="tab-1" class="block pull-left tab-content">
+                          <div class="text">
+                              <div class="number hidden-xs">1</div>
+                              <div class="title">Išsiųsk užklausą</div>
+                              <div class="paragraph">
+                                Užpildykite trumpą užklausos formą, kurioje informuosite paslaugos tiekėjus savo Jūsų poreikius.
+                              </div>
+                          </div>
+                          <div class="image">
+                              <img src="images/how-01.png" alt="#"/>
+                              <a>Siųsti užklausą</a>
+                          </div>
+                      </div>
+                      <div id="tab-2" class="block pull-left tab-content">
+                          <div class="text">
+                              <div class="number hidden-xs">2</div>
+                              <div class="title">Gauk pasiūlymus</div>
+                              <div class="paragraph">
+                                Gaukite paslaugų tiekimo pasiūlymus iš skirtingų paslaugų tiekėjų.
+                              </div>
+                          </div>
+                          <div class="image">
+                              <img src="images/how-02.png" alt="#"/>
+                          </div>
+                      </div>
+                      <div id="tab-3" class="block pull-left tab-content">
+                          <div class="text">
+                              <div class="number hidden-xs">3</div>
+                              <div class="title">Išsiųsk užklausą</div>
+                              <div class="paragraph">
+                                Išsirinkite sau priimtiniausią ir geriausiai tinkantį pasiūlymą.
+                              </div>
+                          </div>
+                          <div class="image">
+                              <img src="images/how-03.png" alt="#"/>
+                              <a >Perku Pats</a>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="reviews">
+          <div class="container">
+              <div class="col-lg-12">
+                  <div class="clearfix headline">
+                      <h2 class="pull-left">Atsiliepimai</h2>
+                  </div>
+                  <div class="row clearfix">
+                      <div class="col-lg-3 col-md-6 col-sm-6 review">
+                          <div class="inner">
+                              <div class="rating">
+                                  <i class="fa fa-star" aria-hidden="true"></i>
+                                  <i class="fa fa-star" aria-hidden="true"></i>
+                                  <i class="fa fa-star" aria-hidden="true"></i>
+                                  <i class="fa fa-star" aria-hidden="true"></i>
+                                  <i class="fa fa-star-o" aria-hidden="true"></i>
+                              </div>
+                              <div class="text">
+                              Pirmą kartą sistema pasinaudojau savo įmonei ieškodama interneto tiekėjo. Tikrai kur kas greičiau nei naršyti internete ir ranka pildyti užklausos formas.
+                              </div>
+                              <div class="author">
+                                  Neringa
+                                  <br/>
+                                  COO, Pakrantės jausmas
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-lg-3 col-md-6 col-sm-6 review hidden-xs">
+                          <div class="inner">
+                              <div class="rating">
+                                  <i class="fa fa-star" aria-hidden="true"></i>
+                                  <i class="fa fa-star" aria-hidden="true"></i>
+                                  <i class="fa fa-star" aria-hidden="true"></i>
+                                  <i class="fa fa-star" aria-hidden="true"></i>
+                                  <i class="fa fa-star-o" aria-hidden="true"></i>
+                              </div>
+                              <div class="text">
+                                  Ačiū, jog padėjote sutaupyti daug laiko ir nemažai pinigų.
+                              </div>
+                              <div class="author">
+                                  Kažkas Pavardienė
+                                  <br/>
+                                  Pardavimo vadovas, UAB "Akmena"
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-lg-3 col-md-6 col-sm-6 review hidden-xs hidden-sm">
+                          <div class="inner">
+                              <div class="rating">
+                                  <i class="fa fa-star" aria-hidden="true"></i>
+                                  <i class="fa fa-star" aria-hidden="true"></i>
+                                  <i class="fa fa-star" aria-hidden="true"></i>
+                                  <i class="fa fa-star" aria-hidden="true"></i>
+                                  <i class="fa fa-star-o" aria-hidden="true"></i>
+                              </div>
+                              <div class="text">
+                                  Sistema naudojomės ieškodami web kūrėjų. Kadangi ieškojome ekonomiško varianto, galimybė rinktis iš gan plataus kainų spektro labai pagelbėjo.
+                              </div>
+                              <div class="author">
+                                  Kažkas Pavardienė
+                                  <br/>
+                                  Generalinis direktorius, UAB "Avija"
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-lg-3 col-md-6 col-sm-6 review hidden-xs hidden-sm">
+                          <div class="inner">
+                              <div class="rating">
+                                  <i class="fa fa-star" aria-hidden="true"></i>
+                                  <i class="fa fa-star" aria-hidden="true"></i>
+                                  <i class="fa fa-star" aria-hidden="true"></i>
+                                  <i class="fa fa-star" aria-hidden="true"></i>
+                                  <i class="fa fa-star-o" aria-hidden="true"></i>
+                              </div>
+                              <div class="text">
+                                  Puiki sistema, kai neturi pažįstamų ar draugų, kurie galėtų kažką rekomenduoti ar tiesiog norint sužinoti rinkos pasiūlą.
+                              </div>
+                              <div class="author">
+                                  Kažkas Pavardienė
+                                  <br/>
+                                  CMO, Grigeo
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="text-center hidden-xs hidden-sm hidden">
+                      <a href="#" class="show-all">Rodyti visas</a>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="get-offer hidden-xs hidden-sm">
+          <div class="container">
+              <div class="col-lg-12">
+                  <div class="main-search">
+                      <div class="headings">
+                          <h2></h2>
+                          <span>Užpildyk formą dabar</span>
+                      </div>
+                      <div class="form clearfix">
+                        <div class="dropdown pull-left">
+                            <button class="select" id="select-city-1" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                              <i class="fa fa-search" aria-hidden="true"></i>
+                                <span class="selection">Kokios paslaugos norėtumėte šiandien?</span>
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="select-city-1">
+                                <li  ng-class="{'open': clicked}" ng-click="clicked = !clicked" ng-repeat="album in albums" value="{{album.album}}"><a href="#/paslaugos/{{album.id}}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">{{album.album}}</a></li>
+                            </ul>
+                        </div>
+                          <div class="form-submit pull-left">
+                              <button type="submit">Gauk geriausią pasiūlymą<i class="fa fa-caret-right" aria-hidden="true"></i></button>
+                          </div>
+                      </div>
+                      <div class="keywords">
+                          Populiariausios paslaugos:
+                          <a ng-repeat="album in albums" ui-sref="beatles.detail({id:album.id})">{{album.album}},    </a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div ng-include src="'layouts/footer.html'"></div>

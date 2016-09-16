@@ -1,0 +1,62 @@
+[
+  {
+    "id": "seo",
+    "kategorija": "rinkodara",
+    "album": "Seo",
+    "date": "1963-03-22",
+    "title1": "SEO. Kokia tai paslauga?",
+    "Apie_paslauga": "SEO - tai interneto tinklalapių projektavimo metodologija, siekiant aukščiausių tinklalapio pozicijų paieškos sistemų rezultatuose, kitaip tariant, tai tinklalapio pritaikymas paieškos algoritmams, kuriuos naudoja Google, Bing, Yahoo, Yandex ir daugybė kitų paieškos sistemų.",
+    "title2": "Kam reikalingas SEO ir dėl ko verta turėti SEO partnerius?",
+    "description1":"Jei jūs turite interneto svetainę, elektroninę parduotuvę, talpinate informaciją apie save ir savo teikiamas paslaugas bei norite padidinti lankomumą, tai šis procesas tikrai jums pravers. Nauji lankytojai tampa potencialiais pirkėjais. Apibendrinant SEO galima teigti, kad tai itin svarbi internetinio verslo rinkodaros proceso dalis, padedanti užtikrinti pardavimų bei kitų konversijų augimą. ",
+    "title3":"Ką daro SEO kompanijos?",
+    "description2":"SEO paslaugos teikiančios kompanijos gali turėti skirtingus požiūrius bei darbo procesus, siekiant užtikrinti kliento augimą. Kiekvienas patikimas SEO partneris turėtų užtikrinti šių pagrindinių SEO darbų atlikimą: Internetinių svetainė analizė bei rekomendacijų teikimas jų optimizavimui. Turinio kūrimas bei optimizavimas paieškos sistemoms. Išorinio nuorodų tinklelio plėtimas.Svetainės migracijos priežiūra.",
+    "title4":"Į ką reikėtų atsižvelgti ieškant SEO partnerio?",
+    "description3":"Klientai. Jei gali būti puikus agentūros atspindys. Dideli ar gerai žinomi prekiniai ženklai, tai puiki indikacija, jog įmone tiki ir pasitiki ir patys geriausi. Į įmones turinčia vos vieną ar du nedidelius klientus, reikėtų žiūrėti atsargiai. Tokios įmonės gali pasiūlyti mažesnę kainą, bet ne visada gali užtikrinti aukščiausią paslaugų kokybę.Patirtis. Pasidomėkite kokią patirtį turi pati įmonė ar joje dirbantys specialistai. Naujos įmonės nebūtinai yra nepatikimos, svarbiausia, kas joje dirba, o tai galite patikrinti, kad ir per LinkedIn profilius. Bendravimas. Didelė bendro darbo dalis yra komunikacija, todėl neapsiribokite vien tik el. laiškais. Susitikite su potencialiu partneriu, pabendraukite su projektų vadovais, o, jei yra galimybė, ir su pačiu direktoriumi. Jei nerasite bendros kalbos apsibrėžiant tikslus ir siekius, didelė tikimybė, jog jos nerasite ir siekdami bendrų rezultatų.",
+    "step1":"klausimas 1",
+    "step2":"klausias 2",
+    "step3":"klausimas 5",
+    "step4":"klausiams 4"
+  },
+  {
+    "id": "cro",
+    "kategorija": "rinkodara",
+    "album": "Cro",
+    "date": "1963-11-22",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+  },
+  {
+    "id": "marketingas",
+    "kategorija": "rinkodara",
+    "album": "Marketing",
+    "date": "1964-04-12",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+  },
+  {
+    "id": "programavimo-darbai",
+    "kategorija": "programavimas",
+    "album": "Programavimo darbai",
+    "date": "1964-04-12",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+  },
+  {
+    "id": "dizaino-darbai",
+    "kategorija": "programavimas",
+    "album": "Dizaino darbai",
+    "date": "1964-04-12",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+  },
+  {
+    "id": "buhalerija",
+    "kategorija": "sistemos",
+    "album": "Buhalterija",
+    "date": "1964-04-12",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+  },
+  {
+    "id": "valdymo-sistemos",
+    "kategorija": "sistemos",
+    "album": "Buhalterija",
+    "date": "1964-04-12",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+  }
+]

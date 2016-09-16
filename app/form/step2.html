@@ -1,0 +1,37 @@
+<div ng-include src="'layouts/header.html'"></div>
+<div class="main-block">
+    <div class="container">
+        <div class="col-lg-12">
+            <div class="request">
+                <div class="title"><i class="fa fa-info-circle" aria-hidden="true"></i>Atsakykite į kelis klausimus, jie padės surasti Jums Buhalterines paslaugas</div>
+                <div class="block">
+                    <div class="progress-line">
+                        <div class="filled filled-2"></div>
+                    </div>
+                    <div class="question">
+                        Coaching often spans multiple sessions. Please describe what you would like to achieve with your coach.
+                    </div>
+                    <form name="userForm" novalidate>
+                    <div class="form-elements">
+                        <div class="form-element clearfix">
+                            <input type="radio" name="chickenEgg" value="cece" id="radio-01" ng-model="formData2.value" required />
+                            <label for="radio-01">Career</label>
+                        </div>
+                        <div class="form-element clearfix">
+                            <input type="radio" name="chickenEgg" value="ce" id="checkbox-02" ng-model="formData2.value" required/>
+                            <label for="checkbox-02">Relationships</label>
+                        </div>
+                    </div>
+                    <div class="submit">
+                        <button ng-click="klausimas2();" ng-disabled="userForm.$invalid">Toliau<i class="fa fa-caret-right" aria-hidden="true"></i></button>
+                        <div class="back-step">
+                            <a ng-click="atgal();">Atgal</a>
+                        </div>
+                    </div>
+                  </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div ng-include src="'layouts/footer.html'"></div>

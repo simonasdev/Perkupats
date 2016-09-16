@@ -1,0 +1,52 @@
+<div ng-include src="'layouts/header.html'"></div>
+<div class="main-block">
+    <div class="container">
+        <div class="col-lg-12">
+            <div class="clearfix headline">
+                <h1 class="pull-left">Paslaugos</h1>
+            </div>
+            <div class="clearfix row">
+                <div class="category col-lg-4 col-md-4 col-sm-6">
+                    <div class="inner">
+                        <div class="image">
+                            <img src="images/service-category-01.jpg" alt="#"/>
+                        </div>
+                        <div class="text">
+                            <h3>Verslo valdymo sistemos</h3>
+                            <ul ng-repeat="album in albums | filter: { kategorija: 'sistemos'}">
+                                <li><a href="#/paslaugos/{{album.id}}">{{album.album}}</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="category col-lg-4 col-md-4 col-sm-6">
+                    <div class="inner">
+                        <div class="image">
+                            <img src="images/coding.png" alt="#"/>
+                        </div>
+                        <div class="text">
+                            <h3>Programavimas</h3>
+                            <ul ng-repeat="album in albums | filter: { kategorija: 'programavimas'}">
+                                <li><a href="#/paslaugos/{{album.id}}">{{album.album}}</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="category col-lg-4 col-md-4 col-sm-6">
+                    <div class="inner">
+                        <div class="image">
+                            <img src="images/marketing.png" alt="#"/>
+                        </div>
+                        <div class="text">
+                            <h3>Skaitmeninė rinkodara</h3>
+                            <ul ng-repeat="album in albums | filter: { kategorija: 'rinkodara'}">
+                                <li><a href="#/paslaugos/{{album.id}}">{{album.album}}</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div ng-include src="'layouts/footer.html'"></div>
