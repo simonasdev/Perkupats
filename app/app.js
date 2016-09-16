@@ -32,7 +32,7 @@ angular
       .state('beatles', {
         abstract: true,
         url: '/paslaugos',
-         templateUrl: '<div ui-view></div>',
+         template: '<div ui-view></div>',
          controller: 'formController'
       })
       .state('beatles.list', {
